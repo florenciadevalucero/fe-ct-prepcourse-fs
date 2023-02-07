@@ -140,12 +140,12 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
-   if (num % 3 === 0){
-      return 'fizz';
+   if (num % 3 === 0 && num % 5 === 0){
+      return "fizzbuzz";
    } else if( num % 5 === 0){
       return 'buzz';
-   } else if( num % 3 === 0 && num % 5 === 0){
-      return "fizzbuzz";
+   } else if( num % 3 === 0){
+      return 'fizz';
    } 
    else{
       return false;
@@ -219,13 +219,9 @@ function tieneTresDigitos(num) {
    // Caso contrario, retornar false.
    // Tu código:
    let contador = 0;
-   while (num >= 1){
-      contador = contador + 1;
-      num = num / 10;
-   }
-   if (contador > 2){
+   if (num > 99 && num <= 999){
       return true;
-   }else{
+   } else{
       return false;
    }
 }
@@ -237,9 +233,9 @@ function doWhile(num) {
    // Utilizar el bucle Do-While.
    // Tu código:
    var i = 0;
-   var resultado = 0;
+   var resultado = num;
    do {
-        resultado = num + 5;
+        resultado = resultado + 5;
          i = i + 1;
    } while (i < 8);
    return resultado;

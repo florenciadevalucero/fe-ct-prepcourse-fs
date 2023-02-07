@@ -3,13 +3,17 @@
 function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
    // Tu código:
+   return array[0];
 }
+devolverPrimerElemento['Hola', 'Como', 'Estas'];
 
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
+  
+   return array.length[-1];
 }
-
+devolverUltimoElemento[1, 2, 3];
 function obtenerLargoDelArray(array) {
    // Retornar la longitud del arreglo recibido por parámetro.
    // Tu código:
