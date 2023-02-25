@@ -12,14 +12,14 @@ class Persona {
       this.edad = edad;
       this.domicilio = domicilio;
    }
-   detalle(){
-      let objeto = {
-         nombre: nombre,
-         apellido: apellido,
-         edad: edad,
-         domicilio: domicilio, 
-      }
-      return objeto;
+
+   detalle() {
+      return {
+         nombre : this.nombre,
+         apellido: this.apellido,
+         edad: this.edad,
+         domicilio: this.domicilio,
+      };
    }
 }
 
@@ -28,7 +28,7 @@ function crearInstanciaPersona(nombre, apellido, edad, domicilio) {
    // Recibirás las propiedades por parámetro.
    // Retornar la instancia creada.
    // Tu código:
-   let instanciaPersona = new Persona(nombre, apellido, edad, domicilio);
+   const instanciaPersona = new Persona(nombre, apellido, edad, domicilio);
    return instanciaPersona;
 }
 
@@ -37,11 +37,10 @@ function agregarMetodo() {
    // Este método toma la propiedad "nombre" y "edad", y devuelve el string:
    // Ejemplo: "Juan, 22 años".
    // Tu código:
-   datos(nombre, edad){
-      return this.nombre + ',' + this.edad;
-   }
+   Persona.prototype.datos = function(){
+      return this.nombre + ", " + this.edad + "años";
+  } 
 }
-let agregandoMetodo = new datos('florencia', 25);
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {

@@ -1,7 +1,7 @@
 /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 /*1️⃣ EJERCICIO 01 1️⃣*/
 
-function crearUsuario(usuario, nombre, email, password) {
+function crearUsuario() {
    // Crea una Clase de ES6 o una función constructora llamada "Usuario".
    // El constructor de esta clase debe tener las propiedades: "usuario", "nombre", "email" y "password".
    // El valor de cada propiedad la recibirá por parámetro.
@@ -17,13 +17,10 @@ function crearUsuario(usuario, nombre, email, password) {
       this.password = password;
       this.saludar = function(){
          return 'Hola, mi nombre es ' + this.nombre;
-      }
-   }
-   return Usuario;
-   return saludar;
+      };
+      return Usuario;
+   } 
 }
-let instancia = new Usuario('Flor', 'florencia', 'florencia.devalucero@gmail.com', 1234);
-
 function agregarMetodoPrototype(Usuario) {
    // Agrega un método al prototipo de "Usuario".
    // El método debe llamarse "saludar" y debe devolver el string "Hello World!".
@@ -32,14 +29,14 @@ function agregarMetodoPrototype(Usuario) {
       return 'Hello World!';
    }
 }
-let agregarSaludo = new Usuario();
+
 
 function agregarStringInvertida() {
    // Agrega un método al prototipo de "String" que devuelva la misma cadena de caracteres, pero invertida.
    // El método debe llamarse "reverse".
    // [PISTA]: necesitarás utilizar el objeto "this".
-   String.prototype.reverse = function(){
-      return this.split(").reverse().join(");
+   String.prototype.reverse = function(){ //String en este caso es una clase de string
+      return this.split("").reverse().join(""); // y accedemos a su prototipo para usar 
    }  
 }
 
